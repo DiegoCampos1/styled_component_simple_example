@@ -1,5 +1,5 @@
 ## React + Styled Components
-Aplicação contruída utilizando React e Stylede Components, com o objetivo de trazer alguns exemplos da utilização da biblioteca.
+Aplicação construída utilizando React e Stylede Components, com o objetivo de trazer alguns exemplos da utilização da biblioteca.
 
 ### Available Scripts
 
