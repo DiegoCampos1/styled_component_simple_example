@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import { Title, BannerContainer, Button, FlexContainer } from './AppStyled';
+import hollowKnight from './hollowKnight.jpg';
+import oriAndWill from './oriAndWill.jpg';
 
-function App() {
+const App = () => {
+  const [imageContainer, setImageContainer] = useState(hollowKnight);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <Title primary>Styled Components + React</Title>
+      <BannerContainer image={imageContainer}>
+        <Title>Styled Components + React</Title>
+      </BannerContainer>
+      <FlexContainer column>
+        <Button
+          fontSize={'30px'}
+          color={'#334296'}
+          onClick={() => setImageContainer(hollowKnight)}
         >
-          Learn React
-        </a>
-      </header>
+          Hollow Knight
+        </Button>
+        <Button onClick={() => setImageContainer(oriAndWill)}>Ori</Button>
+      </FlexContainer>
     </div>
   );
-}
+};
 
 export default App;
